@@ -1,3 +1,25 @@
+const welcomeScreen = document.querySelector("#welcome-window");
+const welcomeScreenOpen = document.querySelector("#welcomeopen");
+const welcomeScreenClose = document.querySelector("#welcomeClose");
+
+function closeWindow(element){
+  element.style.display = "none";
+}
+
+function openWindow(element){
+  element.style.display = "block";
+  element.style.top = "";
+  element.style.left = "";
+}
+
+welcomeScreenClose.addEventListener("click", function() {
+  closeWindow(welcomeScreen);
+});
+
+welcomeScreenOpen.addEventListener("click", function() {
+  openWindow(welcomeScreen);
+});
+
 
 function updateTime(){
   var currentTime = new Date().toLocaleString();
@@ -53,12 +75,5 @@ function dragElement(element) {
     document.onmousemove = null;
   }
 
-  if (document.getElementById(elmnt.id + "header")) {
-    // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
-    elmnt.onmousedown = dragMouseDown;
-  }
 }
 
