@@ -6,7 +6,8 @@ function updateTime(){
 }
 setInterval(updateTime, 1000);
 
-dragElement(document.getElementById("welcome-window"));
+dragElement(document.getElementById("welcome-window")); 
+dragElement(document.getElementById("gif"));
 
 function dragElement(element) {
   var initialX = 0;
@@ -51,4 +52,13 @@ function dragElement(element) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
+
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
 }
+
