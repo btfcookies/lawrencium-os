@@ -1,6 +1,26 @@
 const welcomeScreen = document.querySelector("#welcome-window");
 const welcomeScreenOpen = document.querySelector("#welcomeopen");
 const welcomeScreenClose = document.querySelector("#welcomeClose");
+var selectedIcon = undefined;
+
+function selectIcon(element){
+  element.classList.add("selected");
+  selectedIcon = element;
+}
+
+function deselectIcon(element){
+  element.classList.remove("selected");
+  selectIcon = undefined;
+}
+
+function handleIconTap(element){
+  if(element.classList.contains("selected") == true){
+    deselectIcon(element);
+    openWindow(window);
+  } else{
+    
+  }
+}
 
 function closeWindow(element){
   element.style.display = "none";

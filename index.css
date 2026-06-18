@@ -24,7 +24,8 @@
   backdrop-filter: blur(10px);
   background-color: rgba(121, 103, 103, 0.25);
   color: green;
-  
+  margin-top: 0px;
+  padding-top: 0pxf;
 
 }
 
@@ -52,4 +53,43 @@
   width: 16px;
   height: 16px;
   padding-right: 8px;
+}
+
+.dock{
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.desktopApps{
+  display: flex;
+  gap: 8px;
+  color: white;
+}
+
+.icon{
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  object-fit: cover;
+  transition: transform 0.15s ease;
+}
+
+.icon:hover{
+  transform: scale(1.15);
+}
+
+.notes-window{
+  top: calc(50% - 240px); 
+  left: calc(50% - 260px);
 }
