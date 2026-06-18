@@ -7,7 +7,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 16px; 
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px; 
   border: solid; 
   border-color: white; 
   width: 500px;  
@@ -31,4 +33,14 @@
 .gif{
   padding-top: 90px;
   padding-left: 100px;
+}
+
+.welcome-windowheader{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: move;
+  justify-content: center;
+  background-color: gray;
+  font-family: "Pixelify Sans";
 }
