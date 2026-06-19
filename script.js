@@ -22,6 +22,9 @@ function handleIconTap(element){
   }
 }
 
+const notepadClose = document.querySelector("#notepadClose");
+const notepadOpen = document.querySelector("#notepadOpen");
+
 function closeWindow(element){
   element.style.display = "none";
 }
@@ -36,8 +39,16 @@ welcomeScreenClose.addEventListener("click", function() {
   closeWindow(welcomeScreen);
 });
 
+notepadClose.addEventListener("click", function() {
+  closeWindow(document.querySelector("#notepad-window"));
+});
+
 welcomeScreenOpen.addEventListener("click", function() {
   openWindow(welcomeScreen);
+});
+
+notepadOpen.addEventListener("click", function() {
+  openWindow(document.querySelector("#notepad-window"));
 });
 
 
@@ -50,6 +61,7 @@ setInterval(updateTime, 1000);
 
 dragElement(document.getElementById("welcome-window")); 
 dragElement(document.getElementById("gif"));
+dragElement(document.getElementById("notepad-window"));
 
 function dragElement(element) {
   var initialX = 0;

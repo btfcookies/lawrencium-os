@@ -27,14 +27,20 @@
    <img src="clash-of-clans.gif" alt="Goblin GIF" width="200" height="200" class="gif" id="gif">
     <div class="dock">
       <div id="desktopApps" class="desktopApps">
-        <div class="appIcon selected">
+        <div class="appIcon selected" id="notepadOpen">
           <img src="notepad.jpg" alt="Icon" class="icon">
         </div>
       </div>
     </div>
   </div>
 
-  <div class="notepad-window" id="notes"></div>
+  <div class="notepad-window" id="notepad-window">
+    <div id="notepad-windowheader" class="notepad-windowheader">
+      <img class="closeButton" id="notepadClose" src="close.png"></img>
+    </div>
+    <h1 style="color: green; font-family: 'Pixelify Sans'; padding-left: 10px;">Notepad</h1>
+    <input style="color: green; font-family: 'Pixelify Sans';" type="text" placeholder="Start typing here" class="notepadText">
+  </div>
 
   
   <script src="script.js"></script>
